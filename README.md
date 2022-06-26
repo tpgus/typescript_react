@@ -1,14 +1,5 @@
-# typescript 와 react 연습
+# react와 typescript 연습하기
 
 ---
-
-<details>
-<summary>ToDoList</summary>
-<div markdown="1"> 
-  
- ![ezgif com-gif-maker (8)](https://user-images.githubusercontent.com/43470398/175796219-745ad715-34db-4cf5-a519-539ff6242669.gif)
-  
-</div>
-</details>
-
+- [ToDoLIst](https://github.com/tpgus/typescript_react/tree/main/ToDoList) : 할 일 추가 및 삭제 기능을 구현한 프로젝트
 ---
