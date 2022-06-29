@@ -4,6 +4,7 @@ import styles from "./ExpenseDate.module.css";
 interface DateProps {
   date: Date;
 }
+
 const ExpenseDate: React.FC<DateProps> = (props) => {
   const year = props.date.getFullYear();
   const month = props.date.toLocaleString("ko-KR", { month: "numeric" });
