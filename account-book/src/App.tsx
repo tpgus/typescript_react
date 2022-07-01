@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./App.css";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 import { NewExpenseDataType } from "./components/NewExpense/DataType";
@@ -19,10 +18,10 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="App">
+    <>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
-    </div>
+    </>
   );
 };
 

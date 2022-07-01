@@ -1,8 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "./Expenses.module.css";
-import ExpenseItem from "./ExpenseItem";
+import ExpensesList from "./ExpensesList";
 import Card from "../UI/Card";
 import ExpensesFilter from "./ExpensesFilter";
+import ExpensesChart from "./ExpensesChart";
 
 interface ExpensesProps {
   items: {
@@ -13,7 +14,11 @@ interface ExpensesProps {
   }[];
 }
 const Expenses: React.FC<ExpensesProps> = (props) => {
-  const [filteredYear, setFilteredYear] = useState<string>("2022");
+  const [filteredYear, setFilteredYear] = useState<string>("2022"); //타입추론으로도 가능
+
+  const filteredExpenses = props.items.filter(
+    (expense) => expense.date.getFullYear() === +filteredYear
+  );
 
   const filterChangeHandler = (selectedYear: string) => {
     setFilteredYear(selectedYear);
@@ -25,14 +30,8 @@ const Expenses: React.FC<ExpensesProps> = (props) => {
         selectedYear={filteredYear}
         onChangeFilter={filterChangeHandler}
       />
-      {props.items.map((expense) => (
-        <ExpenseItem
-          key={expense.id}
-          date={expense.date}
-          amount={expense.amount}
-          title={expense.title}
-        />
-      ))}
+      <ExpensesChart expenses={filteredExpenses} />
+      <ExpensesList items={filteredExpenses} />
     </Card>
   );
 };

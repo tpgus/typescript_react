@@ -68,6 +68,9 @@ const ExpenseForm: React.FC<ExpenseFormPropsType> = (props) => {
         </div>
       </div>
       <div className={styles["new-expense__actions"]}>
+        <button type="button" onClick={props.onCancle}>
+          취소
+        </button>
         <button type="submit">추가</button>
       </div>
     </form>

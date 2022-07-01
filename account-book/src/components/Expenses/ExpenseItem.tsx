@@ -11,13 +11,15 @@ interface ExpenseItemProps {
 
 const ExpenseItem: React.FC<ExpenseItemProps> = (props) => {
   return (
-    <Card className={styles["expense-item"]}>
-      <ExpenseDate date={props.date} />
-      <div className={styles["description"]}>
-        <h2>{props.title}</h2>
-        <div className={styles["price"]}>{props.amount}원</div>
-      </div>
-    </Card>
+    <li>
+      <Card className={styles["expense-item"]}>
+        <ExpenseDate date={props.date} />
+        <div className={styles["description"]}>
+          <h2>{props.title}</h2>
+          <div className={styles["price"]}>{props.amount}원</div>
+        </div>
+      </Card>
+    </li>
   );
 };
 

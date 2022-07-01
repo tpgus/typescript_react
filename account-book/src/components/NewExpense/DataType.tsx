@@ -10,6 +10,7 @@ export interface NewExpenseDataType extends ExpenseDataType {
 
 export interface ExpenseFormPropsType {
   onSaveExpenseData: (expenseData: ExpenseDataType) => void;
+  onCancle: () => void;
 }
 
 export interface NewExpensePropsType {
