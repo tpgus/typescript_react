@@ -9,7 +9,7 @@ interface PropsType {
 
 type EventType = React.ChangeEvent<HTMLInputElement>;
 
-const ExpenseForm: React.FC<PropsType> = (props) => {
+const ExpenseForm = (props: PropsType) => {
   const [enteredTitle, setEnteredTitle] = useState<string>(""); //타입추론으로도 가능
   const [enteredDate, setEnteredDate] = useState<string>("");
   const [enteredAmount, setEnteredAmount] = useState<string>("");

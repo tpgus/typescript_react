@@ -1,7 +1,7 @@
 import Chart from "../Chart/Chart";
 import { ExpenseType } from "./DataType";
 
-const ExpensesChart: React.FC<ExpenseType> = (props) => {
+const ExpensesChart = (props: ExpenseType) => {
   const chartDataPoints = [
     {
       label: "Jan",

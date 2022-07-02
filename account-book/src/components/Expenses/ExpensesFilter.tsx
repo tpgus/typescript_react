@@ -5,7 +5,7 @@ interface PropsType {
   onChangeFilter: (selectedYear: string) => void;
 }
 
-const ExpenseFilter: React.FC<PropsType> = (props) => {
+const ExpenseFilter = (props: PropsType) => {
   const selectYearHandler = (event: React.ChangeEvent<HTMLSelectElement>) => {
     props.onChangeFilter(event.target.value);
   };

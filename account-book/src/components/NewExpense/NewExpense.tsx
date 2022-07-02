@@ -7,7 +7,7 @@ interface PropsType {
   onAddExpense: (newExpenseData: NewExpenseDataType) => void;
 }
 
-const NewExpense: React.FC<PropsType> = (props) => {
+const NewExpense = (props: PropsType) => {
   const [isEditing, setIsEditing] = useState<boolean>(false);
 
   const saveExpenseDataHandler = (enteredExpenseData: ExpenseDataType) => {

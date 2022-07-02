@@ -6,7 +6,7 @@ interface PropsType {
   label: string;
 }
 
-const ChartBar: React.FC<PropsType> = (props) => {
+const ChartBar = (props: PropsType) => {
   let barFillHeight = "0%";
 
   if (props.maxValue > 0) {

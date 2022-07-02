@@ -5,7 +5,7 @@ interface PropsType {
   date: Date;
 }
 
-const ExpenseDate: React.FC<PropsType> = (props) => {
+const ExpenseDate = (props: PropsType) => {
   const year = props.date.getFullYear();
   const month = props.date.toLocaleString("ko-KR", { month: "numeric" });
   const day = props.date.toLocaleString("ko-KR", { day: "numeric" });

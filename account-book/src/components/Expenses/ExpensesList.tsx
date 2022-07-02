@@ -2,7 +2,7 @@ import styles from "./ExpensesList.module.css";
 import ExpenseItem from "./ExpenseItem";
 import { ExpenseType } from "./DataType";
 
-const ExpensesList: React.FC<ExpenseType> = (props) => {
+const ExpensesList = (props: ExpenseType) => {
   /*
 JSX.Element vs React.ReactNode?
 https://github.com/typescript-cheatsheets/react#useful-react-prop-type-examples

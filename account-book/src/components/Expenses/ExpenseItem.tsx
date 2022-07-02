@@ -9,7 +9,7 @@ interface PropsType {
   amount: number;
 }
 
-const ExpenseItem: React.FC<PropsType> = (props) => {
+const ExpenseItem = (props: PropsType) => {
   return (
     <li>
       <Card className={styles["expense-item"]}>
