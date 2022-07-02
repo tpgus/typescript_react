@@ -1,16 +1,8 @@
 import styles from "./ExpensesList.module.css";
 import ExpenseItem from "./ExpenseItem";
+import { ExpenseType } from "./DataType";
 
-interface ExpensesProps {
-  items: {
-    id: string;
-    title: string;
-    date: Date;
-    amount: number;
-  }[];
-}
-
-const ExpensesList: React.FC<ExpensesProps> = (props) => {
+const ExpensesList: React.FC<ExpenseType> = (props) => {
   /*
 JSX.Element vs React.ReactNode?
 https://github.com/typescript-cheatsheets/react#useful-react-prop-type-examples

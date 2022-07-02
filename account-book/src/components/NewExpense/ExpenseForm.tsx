@@ -1,10 +1,15 @@
 import styles from "./ExpenseForm.module.css";
 import React, { useState } from "react";
-import { ExpenseFormPropsType } from "./DataType";
+import { ExpenseDataType } from "./DataType";
+
+interface PropsType {
+  onSaveExpenseData: (expenseData: ExpenseDataType) => void;
+  onCancle: () => void;
+}
 
 type EventType = React.ChangeEvent<HTMLInputElement>;
 
-const ExpenseForm: React.FC<ExpenseFormPropsType> = (props) => {
+const ExpenseForm: React.FC<PropsType> = (props) => {
   const [enteredTitle, setEnteredTitle] = useState<string>(""); //타입추론으로도 가능
   const [enteredDate, setEnteredDate] = useState<string>("");
   const [enteredAmount, setEnteredAmount] = useState<string>("");

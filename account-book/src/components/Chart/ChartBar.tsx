@@ -1,12 +1,12 @@
 import styles from "./ChartBar.module.css";
 
-interface ChartBarProps {
+interface PropsType {
   value: number;
   maxValue: number;
   label: string;
 }
 
-const ChartBar: React.FC<ChartBarProps> = (props) => {
+const ChartBar: React.FC<PropsType> = (props) => {
   let barFillHeight = "0%";
 
   if (props.maxValue > 0) {

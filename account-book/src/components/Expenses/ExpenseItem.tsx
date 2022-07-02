@@ -3,13 +3,13 @@ import ExpenseDate from "./ExpenseDate";
 import styles from "./ExpenseItem.module.css";
 import Card from "../UI/Card";
 
-interface ExpenseItemProps {
+interface PropsType {
   date: Date;
   title: string;
   amount: number;
 }
 
-const ExpenseItem: React.FC<ExpenseItemProps> = (props) => {
+const ExpenseItem: React.FC<PropsType> = (props) => {
   return (
     <li>
       <Card className={styles["expense-item"]}>

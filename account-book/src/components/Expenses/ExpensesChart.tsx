@@ -1,15 +1,7 @@
 import Chart from "../Chart/Chart";
+import { ExpenseType } from "./DataType";
 
-interface ExpensesProps {
-  expenses: {
-    id: string;
-    title: string;
-    date: Date;
-    amount: number;
-  }[];
-}
-
-const ExpensesChart: React.FC<ExpensesProps> = (props) => {
+const ExpensesChart: React.FC<ExpenseType> = (props) => {
   const chartDataPoints = [
     {
       label: "Jan",
@@ -61,7 +53,7 @@ const ExpensesChart: React.FC<ExpensesProps> = (props) => {
     },
   ];
 
-  for (const expense of props.expenses) {
+  for (const expense of props.items) {
     const expenseMonth = expense.date.getMonth();
     chartDataPoints[expenseMonth].value += expense.amount;
   }

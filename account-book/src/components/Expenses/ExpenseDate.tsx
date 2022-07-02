@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./ExpenseDate.module.css";
 
-interface DateProps {
+interface PropsType {
   date: Date;
 }
 
-const ExpenseDate: React.FC<DateProps> = (props) => {
+const ExpenseDate: React.FC<PropsType> = (props) => {
   const year = props.date.getFullYear();
   const month = props.date.toLocaleString("ko-KR", { month: "numeric" });
   const day = props.date.toLocaleString("ko-KR", { day: "numeric" });

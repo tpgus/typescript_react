@@ -1,4 +1,4 @@
-export interface ExpensesProps {
+interface ExpenseType {
   items: {
     id: string;
     title: string;
@@ -6,3 +6,5 @@ export interface ExpensesProps {
     amount: number;
   }[];
 }
+
+export type { ExpenseType };

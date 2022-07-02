@@ -1,13 +1,13 @@
 import styles from "./Chart.module.css";
 import ChartBar from "./ChartBar";
 
-interface ChartProps {
+interface PropsType {
   dataPoints: {
     label: string;
     value: number;
   }[];
 }
-const Chart: React.FC<ChartProps> = (props) => {
+const Chart = (props: PropsType) => {
   const dataPointValues = props.dataPoints.map((dataPoint) => dataPoint.value);
   const Maximum = Math.max(...dataPointValues);
   return (

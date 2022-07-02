@@ -1,9 +1,13 @@
 import { useState } from "react";
 import styles from "./NewExpense.module.css";
 import ExpenseForm from "./ExpenseForm";
-import { ExpenseDataType, NewExpensePropsType } from "./DataType";
+import { ExpenseDataType, NewExpenseDataType } from "./DataType";
 
-const NewExpense: React.FC<NewExpensePropsType> = (props) => {
+interface PropsType {
+  onAddExpense: (newExpenseData: NewExpenseDataType) => void;
+}
+
+const NewExpense: React.FC<PropsType> = (props) => {
   const [isEditing, setIsEditing] = useState<boolean>(false);
 
   const saveExpenseDataHandler = (enteredExpenseData: ExpenseDataType) => {
