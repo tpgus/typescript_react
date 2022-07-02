@@ -16,7 +16,7 @@ https://github.com/typescript-cheatsheets/react#useful-react-prop-type-examples
   */
   //let let expensesContent: JSX.Element | JSX.Element[] = <p>데이터가 없습니다.</p>;
   //let let expensesContent: JSX.Element[] = [<p>데이터가 없습니다.</p>];
-  //   let expensesContent: JSX.Element | JSX.Element[] = <p>데이터가 없습니다.</p>;
+  //let expensesContent: JSX.Element | JSX.Element[] = <p>데이터가 없습니다.</p>;
 
   if (props.items.length === 0)
     return (
